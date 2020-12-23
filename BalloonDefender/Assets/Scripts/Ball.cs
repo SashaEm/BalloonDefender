@@ -19,8 +19,6 @@ public class Ball : MonoBehaviour
         healthPoints -= damage;
         if(healthPoints <= 0f)
         {
-            MoneyManager.money += reward;
-            CurrentMoneyShow.UpdateMoneyText();
             Destroy(gameObject);
         }
     }
@@ -46,6 +44,9 @@ public class Ball : MonoBehaviour
 
     private void OnDestroy()
     {
+        MoneyManager.money += reward;
+        ScoreManager.ScoreAdd(reward);
+        CurrentMoneyShow.UpdateMoneyText();
         Spawner.enemiesAlive--;
     }
 }

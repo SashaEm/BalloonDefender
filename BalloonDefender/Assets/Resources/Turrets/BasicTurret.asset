@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasicTurret
   m_EditorClassIdentifier: 
   turretName: Base Turret
-  icon: {fileID: 21300000, guid: b42191015f3f23f42a4d51eb733c6b2f, type: 3}
+  icon: {fileID: 21300000, guid: 847dca967082fc742890d2aa67f8ca2c, type: 3}
   price: 30
   turret: {fileID: 7205133788060560529, guid: c63e1687cdb2e964d8d647d91edc69c5, type: 3}
   isUnlockedByDefault: 1

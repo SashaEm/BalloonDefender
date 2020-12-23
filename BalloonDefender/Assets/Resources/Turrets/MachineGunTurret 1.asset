@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e658b38a17317e438f2455f02af75dc, type: 3}
   m_Name: MachineGunTurret 1
   m_EditorClassIdentifier: 
-  turretName: Canon Gun
-  icon: {fileID: 21300000, guid: b42191015f3f23f42a4d51eb733c6b2f, type: 3}
+  turretName: Machine Gun
+  icon: {fileID: 21300000, guid: c2da0ab9ee2a05446a338244087955a1, type: 3}
   price: 50
-  turret: {fileID: 4441030359264216559, guid: 257e6fe0ba88b9c4c837aa28b5e6e925, type: 3}
+  turret: {fileID: 7205133788060560529, guid: eb197fa47e7ec2d4aa2d9bb7bed05832, type: 3}
   isUnlockedByDefault: 1

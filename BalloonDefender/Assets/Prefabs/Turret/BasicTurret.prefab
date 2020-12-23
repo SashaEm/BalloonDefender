@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6378335494453211973}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.78, y: 0.41, z: 0}
+  m_LocalPosition: {x: -2.19, y: 0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7205133787357335056}
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b42191015f3f23f42a4d51eb733c6b2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 847dca967082fc742890d2aa67f8ca2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -181,3 +181,5 @@ MonoBehaviour:
   turretSprite: {fileID: 7205133787357335056}
   enemies: []
   isOnLeft: 0
+  bestTarget: {fileID: 0}
+  lerpFactor: 0

@@ -11,6 +11,10 @@ public class ShopScreen : MonoBehaviour
 
     private List<TurretScriptable> AllTurrets => ShopManager.Instance.GetAllTurrets();
 
+    private void Start()
+    {
+        ScoreManager.shopCanvas = this.gameObject;
+    }
     private void OnEnable()
     {
         confirmPurchaseOverlay.SetActive(false);

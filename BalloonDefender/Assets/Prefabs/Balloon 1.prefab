@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c134b4b5358ea534db3a7db4c9558664, type: 3}
-  m_Color: {r: 0, g: 0.19503069, b: 1, a: 1}
+  m_Color: {r: 0.8490566, g: 0.83288234, b: 0.3964934, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPoints: 2
-  reward: 50
+  reward: 10

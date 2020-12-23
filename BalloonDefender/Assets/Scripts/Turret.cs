@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private Bullet projectile1;
     [SerializeField] private Transform turretSprite;
-    [HideInInspector] public List<Transform> enemies = new List<Transform>();
+    [HideInInspector] public List<Ball> enemies = new List<Ball>();
     [HideInInspector] public bool isOnLeft;
     [HideInInspector] public Transform bestTarget;
     [HideInInspector] public float lerpFactor = 0f;
@@ -50,7 +50,8 @@ public class Turret : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            enemies.Add(other.transform);
+            var enemy = other.transform.gameObject.GetComponent<Ball>();
+            enemies.Add(enemy);
         }
     }
 
@@ -62,7 +63,8 @@ public class Turret : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            enemies.Remove(other.transform);
+            var enemy = other.transform.GetComponent<Ball>();
+            enemies.Remove(enemy);
             bestTarget = null;
         }
     }
@@ -107,15 +109,15 @@ public class Turret : MonoBehaviour
     public virtual Transform LookForBestTarget()
     {
         float closestDistance = Mathf.Infinity;
-        foreach(Transform target in enemies)
+        foreach(Ball target in enemies)
         {
             if(target == null)
             {
                 continue;
             }
-            if (Vector2.Distance(transform.position, target.position) < closestDistance)
+            if (Vector2.Distance(transform.position, target.transform.position) < closestDistance)
             {
-                bestTarget = target;
+                bestTarget = target.transform;
             }
         }
         return bestTarget;

@@ -8,6 +8,6 @@ public class MoneyManager : MonoBehaviour
     [SerializeField] private int startMoney = 20;
     private void Awake()
     {
-        money += startMoney;
+        money = startMoney;
     }
 }

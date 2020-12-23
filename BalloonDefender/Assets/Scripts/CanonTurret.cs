@@ -4,27 +4,19 @@ using UnityEngine;
 
 public class CanonTurret : Turret
 {
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            enemies.Add(other.transform);
-        }
-    }
-
     public override Transform LookForBestTarget()
     {
         float hp = 0f;
-        foreach (Transform target in enemies)
+        foreach (Ball target in enemies)
         {
-            var newHp = target.gameObject.GetComponent<Ball>().healthPoints;
+            var newHp = target.healthPoints;
             if (target == null)
             {
                 continue;
             }
             if (newHp > hp)
             {
-                bestTarget = target;
+                bestTarget = target.transform;
             }
         }
         return bestTarget;
